@@ -51,7 +51,7 @@ void satfile(char a[],int orderG,int sizeG,int adjacent(int,int))
 		for (j = i+1; j < n; j++)	// pour tous les autres sommets
 		{
 			fprintf(file, "%d %d ",-(i*(k)+1),-(j*(k)+1));	//	Il ne faut pas avoir deux racines
-			fprintf(file, "0\n");	// /\
+			fprintf(file, "0\n");
 			t++;
 		}	
 	}
@@ -59,7 +59,7 @@ void satfile(char a[],int orderG,int sizeG,int adjacent(int,int))
 	{
 		fprintf(file, "%d ",i*(k)+1);	//	On doit avoir au moins une racine
 	}
-	fprintf(file, "0\n");	// /\
+	fprintf(file, "0\n");
 	t++;
 
 
@@ -70,7 +70,7 @@ void satfile(char a[],int orderG,int sizeG,int adjacent(int,int))
 	{
 		fprintf(file,"%d ",i*(k)+k);	// On doit avoir un sommet qui a la profondeur maximale
 	}
-	fprintf(file, "0\n");	// /\
+	fprintf(file, "0\n");
 	t++;
 
 
@@ -87,7 +87,7 @@ void satfile(char a[],int orderG,int sizeG,int adjacent(int,int))
 					if(l!=i && adjacent(i+1,l+1))	//	les sommets voisins
 						fprintf(file, "%d ",l*(k)+(j-1)+1);	//	soit un de ses voisins est son parent
 			}
-			fprintf(file, "0\n");	// /\
+			fprintf(file, "0\n");
 			t++;
 		}
 	}
