@@ -13,8 +13,24 @@ void satfile(char a[],int orderG,int sizeG,int adjacent(int,int))
 
 	int i,j,l,m;
 	int n = orderG;
-	int k = sizeG;
-	int t = 0;
+	int k = sizeG;	// le nombre de profondeurs possibles
+	int t = 0;	// le nombre de clauses
+
+	/*========= Identification des variables =========*/
+	/*
+		variables = significations
+		1 = le premier sommet est la racine
+		2 = le premier sommet est de profondeur 1
+		3 = le premier sommet est de profondeur 2
+		.
+		.
+		k = le premier sommet est de profondeur k-1
+		k+1 = le deuxiéme sommet est la racine
+		k+2 = le deuxiéme sommet est de profondeur 1
+		.
+		.
+		k*n = le dernier sommet est de profondeur k-1
+	*/
 
 
 	fprintf(file, "c\nc start with comments\nc\np cnf %d       \n",orderG*(sizeG)/* nombre de variables */);
